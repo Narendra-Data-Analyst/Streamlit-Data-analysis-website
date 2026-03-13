@@ -89,6 +89,7 @@ if file is not None:
     ax.set_xlabel(x_axis)
     ax.set_ylabel(y_axis)
     ax.set_title(chart_type)
+    plt.xticks(rotation=45)
 
     st.pyplot(fig)
 else:
