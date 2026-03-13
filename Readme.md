@@ -1,6 +1,6 @@
 # 📊 Streamlit Data Analysis & Visualization Web App
 
-This project is an interactive **Data Analysis and Data Cleaning Web Application** built using **Python, Pandas, Streamlit, and Matplotlib**.  
+This project is an interactive **Data Analysis and Data Cleaning Web Application** built using Python, Pandas, Streamlit, and Matplotlib.  
 It allows users to upload CSV datasets, clean the data, and create visualizations directly from a web interface.
 
 ---
