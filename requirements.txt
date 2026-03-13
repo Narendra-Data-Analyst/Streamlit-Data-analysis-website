@@ -1,5 +1,5 @@
 Required Libraries 
 - streamlit
 - pandas
-- matplotlib
-- numpy
+- matplotlib == 3.8.4
+
