@@ -93,4 +93,4 @@ if file is not None:
 
     st.pyplot(fig)
 else:
-    st.write("please upload csv.type dataset for analysis")impo
+    st.write("please upload csv.type dataset for analysis")
