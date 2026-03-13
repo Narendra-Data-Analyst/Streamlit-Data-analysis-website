@@ -1,4 +1,4 @@
 Required libraries 
 -Streamlit
 -Pandas
--Matplotlib.pyplot
+-Matplotlib
