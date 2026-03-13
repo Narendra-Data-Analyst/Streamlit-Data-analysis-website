@@ -11,6 +11,7 @@ file = st.file_uploader("Upload dataset", type=["csv"])
 if file is not None:
 
     df = pd.read_csv(file)
+    df = df.convert_dtypes()
 
     st.write('Total rows & columns:', df.shape)
 
