@@ -1,4 +1,5 @@
-Required libraries 
--Streamlit
--Pandas
--Matplotlib
+Required Libraries 
+- streamlit
+- pandas
+- matplotlib
+- numpy
