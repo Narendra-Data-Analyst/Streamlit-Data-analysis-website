@@ -65,29 +65,29 @@ if file is not None:
 
     st.subheader("DATA VISUALIZATION")
 
-    chart_type = st.selectbox(
+chart_type = st.selectbox(
     "Select Chart Type",
-    ["Bar Chart", "Line Chart", "Histogram"])
+    ["Bar Chart", "Line Chart", "Histogram"]
+)
 
+numeric_columns = cleaned_df.select_dtypes(include=['number']).columns
 
-    x_axis = st.selectbox("Select X-axis column", cleaned_df.columns)
-    y_axis = st.selectbox("Select Y-axis column", cleaned_df.columns)
+x_axis = st.selectbox("Select X-axis column", cleaned_df.columns)
+y_axis = st.selectbox("Select Y-axis column", numeric_columns)
 
-    fig, ax = plt.subplots()
+fig, ax = plt.subplots()
 
-    if chart_type == "Bar Chart":
-      ax.bar(df[x_axis], df[y_axis])
+if chart_type == "Bar Chart":
+    ax.bar(cleaned_df[x_axis], cleaned_df[y_axis])
 
-    elif chart_type == "Line Chart":
-      ax.plot(df[x_axis], df[y_axis])
+elif chart_type == "Line Chart":
+    ax.plot(cleaned_df[x_axis], cleaned_df[y_axis])
 
-    elif chart_type == "Histogram":
-      ax.hist(df[y_axis])
+elif chart_type == "Histogram":
+    ax.hist(cleaned_df[y_axis])
 
-    ax.set_xlabel(x_axis)
-    ax.set_ylabel(y_axis)
-    ax.set_title(chart_type)
+ax.set_xlabel(x_axis)
+ax.set_ylabel(y_axis)
+ax.set_title(chart_type)
 
-    st.pyplot(fig)
-else :
-   st.warning("please upload a csv for analysis")
+st.pyplot(fig)
